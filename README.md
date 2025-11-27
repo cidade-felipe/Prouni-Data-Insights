@@ -40,7 +40,7 @@ Este projeto utiliza:
 ## 🗂️ Estrutura do Projeto
 
 ```
-TRABALHO_FINAL/
+Prouni-Data-Insights/
 │
 ├── data/                      # Dados originais ou tratados
 │
