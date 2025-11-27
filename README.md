@@ -58,7 +58,8 @@ TRABALHO_FINAL/
 1. Clone este repositório
 2. Crie e ative um ambiente virtual (opcional, mas recomendado)
 3. Instale as dependências
-4. Abra os notebooks no Jupyter ou VSCode
+4. Extraia o conteúdo presente em archive.zip
+5. Abra os notebooks no Jupyter ou VSCode
 
 ```bash
 pip install -r requirements.txt
