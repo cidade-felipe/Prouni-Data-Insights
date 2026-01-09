@@ -43,7 +43,9 @@ Este projeto utiliza:
 ```text
 Prouni-Data-Insights/
 │
-├── data/                      # Dados originais ou tratados
+├── data/
+│
+├── figures/                      # Gráficos e visualizações
 │
 ├── notebooks/                 # Notebooks de análise e visualização
 │   ├── brazil-states.geojson  # Arquivo geográfico usado no mapa
