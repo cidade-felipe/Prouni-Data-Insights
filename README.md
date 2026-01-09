@@ -35,11 +35,12 @@ Este projeto utiliza:
 • **Pandas** para manipulação de dados
 • **Plotly Express** para gráficos interativos
 • **GeoJSON** para o mapa do Brasil
+• **Kaggle Hub** para download automático do dataset
 • **Jupyter Notebook** para análise e exploração colaborativa
 
 ## 🗂️ Estrutura do Projeto
 
-```
+```text
 Prouni-Data-Insights/
 │
 ├── data/                      # Dados originais ou tratados
@@ -58,12 +59,14 @@ Prouni-Data-Insights/
 1. Clone este repositório
 2. Crie e ative um ambiente virtual (opcional, mas recomendado)
 3. Instale as dependências
-4. Extraia o conteúdo presente em archive.zip
+4. Configure suas credenciais da Kaggle (opcional - o dataset será baixado automaticamente)
 5. Abra os notebooks no Jupyter ou VSCode
 
 ```bash
 pip install -r requirements.txt
 ```
+
+**Observação:** O dataset será baixado automaticamente do Kaggle através da biblioteca `kagglehub` na primeira execução do notebook. Não é necessário baixar arquivos manualmente.
 
 Depois disso, basta executar as células e aproveitar os dashboards.
 
@@ -79,3 +82,13 @@ Alguns caminhos interessantes para expandir o projeto:
 ## 💬 Contribuições
 
 Sugestões, melhorias e novas visualizações são muito bem-vindas. Para contribuir, basta abrir uma issue ou enviar um pull request.
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+## 📄 Autor
+
+Este projeto foi desenvolvido por **Felipe Cidade**.  
+[LinkedIn](https://www.linkedin.com/in/cidadefelipe/).  
+[GitHub](https://github.com/cidade-felipe).
