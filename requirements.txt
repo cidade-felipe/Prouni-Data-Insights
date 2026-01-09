@@ -57,3 +57,4 @@ urllib3==2.5.0
 wcwidth==0.2.14
 widgetsnbextension==4.0.15
 kaleido==1.2.0
+kagglehub==0.3.10
