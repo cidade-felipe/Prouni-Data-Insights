@@ -207,3 +207,4 @@ marimo/_lsp/
 __marimo__/
 data/prouni_2005_2019_processed.csv
 figures/
+data/processed/prouni_2005_2019_processed.csv
