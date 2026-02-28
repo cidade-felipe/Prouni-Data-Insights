@@ -1,96 +1,119 @@
 # Prouni Data Insights
 
-Uma investigação visual e analítica sobre os dados do Programa Universidade para Todos. O projeto transforma dados públicos de bolsas em insights claros, comparáveis e visualmente intuitivos, permitindo entender quem recebe bolsas no Brasil e como esse cenário evolui ao longo dos anos.
+Análise de dados do Programa Universidade para Todos (Prouni) com preparação em Python e dashboard final em Power BI. O projeto organiza, trata e apresenta a evolução das bolsas entre 2005 e 2019, destacando recortes por tipo de bolsa, gênero, raça, região, estado e modalidade de ensino.
 
-## 🎯 Objetivo
+## Objetivo
 
-O Prouni Data Insights revela padrões importantes sobre o acesso ao ensino superior no país. A proposta é explorar:
+O projeto foi desenvolvido para transformar dados públicos do Prouni em uma leitura visual clara sobre:
 
-• Diferenças entre bolsas integrais e parciais
-• Distribuição por sexo
-• Perfil por faixa etária
-• Evolução histórica por tipo de bolsa
-• Comportamento regional e estadual
-• Mapa interativo com distribuição por UF
+- crescimento das bolsas ao longo do tempo;
+- diferença entre bolsas integrais e bolsas parciais de 50%;
+- distribuição regional e estadual;
+- perfil demográfico dos beneficiários;
+- participação por sexo, raça e modalidade de ensino.
 
-A análise permite entender não apenas os números, mas o perfil de quem recebe ajuda do governo para estudar.
+## Dashboard em Power BI
 
-## 📊 Visualizações disponíveis
+O principal entregável analítico do repositório é o arquivo [reports/prouni-data-report.pbix](reports/prouni-data-report.pbix), estruturado em três páginas principais:
 
-As principais visualizações incluem:
+### 1. Visão Geral
 
-• Gráfico comparativo por tipo de bolsa
-• Distribuição por sexo ao longo dos anos
-• Tendência regional com crescimento percentual
-• Mapa interativo do Brasil por estado
-• Análise por idade usando faixas de cinco anos
+- indicadores consolidados de bolsas concedidas;
+- comparação anual entre total de bolsas, bolsas integrais e bolsas parciais;
+- distribuição total por região;
+- participação entre ensino presencial e EaD;
+- filtros por tipo de bolsa e ano.
 
-Esses painéis tornam a leitura dos dados mais intuitiva e crítica ao mesmo tempo.
+### 2. Detalhes População
 
-## 🧠 Tecnologias
+- evolução anual das bolsas por gênero;
+- evolução anual por raça;
+- análise com filtro de idade;
+- combinação de filtros por tipo de bolsa e ano.
 
-Este projeto utiliza:
+### 3. Detalhes Regiões
 
-• **Python**
-• **Pandas** para manipulação de dados
-• **Plotly Express** para gráficos interativos
-• **GeoJSON** para o mapa do Brasil
-• **Kaggle Hub** para download automático do dataset
-• **Jupyter Notebook** para análise e exploração colaborativa
+- crescimento das bolsas por ano e por região;
+- mapa coroplético com total de bolsas concedidas por estado;
+- exploração temporal entre 2005 e 2019;
+- filtro por tipo de bolsa.
 
-## 🗂️ Estrutura do Projeto
+## Principais insights explorados
+
+- o Sudeste concentra o maior volume de bolsas no período analisado;
+- bolsas integrais representam a maior parcela do total concedido;
+- o dashboard permite observar crescimento acumulado do programa ao longo da série histórica;
+- os recortes demográficos ajudam a comparar a evolução do acesso ao ensino superior entre diferentes grupos.
+
+## Tecnologias utilizadas
+
+- Python
+- Pandas
+- Jupyter Notebook
+- Plotly
+- Matplotlib
+- KaggleHub
+- Power BI
+- GeoJSON para visualização geográfica por UF
+
+## Estrutura do projeto
 
 ```text
 Prouni-Data-Insights/
-│
 ├── data/
-│
-├── figures/                      # Gráficos e visualizações
-│
-├── notebooks/                 # Notebooks de análise e visualização
-│   ├── brazil-states.geojson  # Arquivo geográfico usado no mapa
-│   ├── preprocessed.ipynb     # Limpeza e tratamento de dados
-│   └── prouni_insights.ipynb  # Visualizações e análises finais
-│
-├── requirements.txt           # Dependências do projeto
-└── .gitignore                 # Exclusões, incluindo /venv e arquivos locais
+│   └── processed/
+│       └── prouni_2005_2019_processed.csv
+├── figures/
+│   └── ... # Exportações gráficas geradas na análise exploratória
+├── notebooks/
+│   ├── brazil-states.geojson
+│   ├── preprocessed.ipynb
+│   └── prouni_insights.ipynb
+├── reports/
+│   ├── prouni-data-report.pbix
+│   └── image/
+│       ├── borracha.png
+│       ├── fundo.png
+│       └── logo.png
+├── requirements.txt
+├── LICENSE
+└── README.md
 ```
 
-## ▶️ Como executar
+## Como executar a preparação dos dados
 
-1. Clone este repositório
-2. Crie e ative um ambiente virtual (opcional, mas recomendado)
-3. Instale as dependências
-4. Configure suas credenciais da Kaggle (opcional - o dataset será baixado automaticamente)
-5. Abra os notebooks no Jupyter ou VSCode
+1. Clone o repositório.
+2. Crie um ambiente virtual, se desejar.
+3. Instale as dependências.
+4. Abra os notebooks em `notebooks/`.
+5. Execute o fluxo de tratamento e análise exploratória.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-**Observação:** O dataset será baixado automaticamente do Kaggle através da biblioteca `kagglehub` na primeira execução do notebook. Não é necessário baixar arquivos manualmente.
+Observação: o dataset pode ser obtido via `kagglehub` durante a execução dos notebooks, dependendo do fluxo usado na sua máquina.
 
-Depois disso, basta executar as células e aproveitar os dashboards.
+## Como abrir o dashboard
 
-## 🚀 Futuras melhorias
+1. Abra o arquivo `reports/prouni-data-report.pbix` no Power BI Desktop.
+2. Atualize as fontes de dados, se necessário.
+3. Navegue entre as páginas `Visão Geral`, `Detalhes População` e `Detalhes Regiões`.
 
-Alguns caminhos interessantes para expandir o projeto:
+## Possíveis evoluções
 
-• Dashboard online com **Streamlit**
-• Previsões com métodos estatísticos ou Machine Learning
-• Inclusão de dados socioeconômicos externos
-• Análise comparativa com outras políticas públicas
+- publicar o dashboard no Power BI Service;
+- adicionar métricas socioeconômicas complementares;
+- criar uma camada de storytelling com insights por página;
+- automatizar o pipeline de atualização dos dados.
 
-## 💬 Contribuições
+## Licença
 
-Sugestões, melhorias e novas visualizações são muito bem-vindas. Para contribuir, basta abrir uma issue ou enviar um pull request.
+Este projeto está sob a licença MIT. Consulte [LICENSE](LICENSE).
 
-## 📝 Licença
+## Autor
 
-Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+Desenvolvido por **Felipe Cidade**.
 
-## 📄 Autor
-
-Este projeto foi desenvolvido por **Felipe Cidade**.  
-[LinkedIn](https://www.linkedin.com/in/cidadefelipe/).  
-[GitHub](https://github.com/cidade-felipe).
+- [LinkedIn](https://www.linkedin.com/in/cidadefelipe/)
+- [GitHub](https://github.com/cidade-felipe)
